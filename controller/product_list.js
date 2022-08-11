@@ -2,6 +2,7 @@ import { dbconnection } from "../database/init.js"
 // import cua from "../schema/cuacuon.js"
 
 export const product_list= (req, res)=> {
+    console.log(req.query)
     if(req.query.category=== "cua-thep-luxury") {
         dbconnection.collection("cua-luxury")
         .find({})
