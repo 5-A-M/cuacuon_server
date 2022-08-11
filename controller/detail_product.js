@@ -1,8 +1,8 @@
 import { dbconnection } from "../database/init.js"
 import mongodb from "mongodb"
 
+export const ObjectId= mongodb.ObjectId
 export const apiDetailProduct= (req, res)=> {
-    const ObjectId= mongodb.ObjectId
     dbconnection.collection("cua")
     .find({ _id: new ObjectId(req.query._id) })
     .toArray((err, docs)=> {
