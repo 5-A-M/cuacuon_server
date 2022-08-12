@@ -12,5 +12,7 @@ export const uploadPhukien = (req, res) => {
     lock: req.body.lock,
     photo: req.body.photo,
     price: req.body.price
-  });
+  })
+  .then(()=> res.json("success"))
+  .catch(err=> console.log(err))
 };

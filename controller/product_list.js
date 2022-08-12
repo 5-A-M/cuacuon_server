@@ -3,7 +3,7 @@ import { dbconnection } from "../database/init.js"
 
 export const product_list= (req, res)=> {
     if(req.query.category=== "cua-thep-luxury") {
-        dbconnection.collection("cua-luxury")
+        dbconnection.collection("cua_luxury")
         .find({})
         .toArray((err, docs)=> {
             if(err) return console.log(err)
