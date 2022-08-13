@@ -7,6 +7,16 @@ export const apiDetailProduct= (req, res)=> {
     .find({ _id: new ObjectId(req.query._id) })
     .toArray((err, docs)=> {
         if(err) return console.log(err)
-        return res.json(docs)
+        if(docs.length > 0) {
+            return res.json(docs)
+        }
+    })
+    dbconnection.collection("cua_luxury")
+    .find({ _id: new ObjectId(req.query._id) })
+    .toArray((err, docs)=> {
+        if(err) return console.log(err)
+        if(docs.length) {
+            return res.json(docs)
+        }
     })
 }

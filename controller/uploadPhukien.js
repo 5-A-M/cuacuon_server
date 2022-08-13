@@ -11,7 +11,8 @@ export const uploadPhukien = (req, res) => {
     lockBody: req.body.lockBody,
     lock: req.body.lock,
     photo: req.body.photo,
-    price: req.body.price
+    price: req.body.price,
+    time_created: new Date()
   })
   .then(()=> res.json("success"))
   .catch(err=> console.log(err))

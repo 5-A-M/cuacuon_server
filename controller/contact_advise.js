@@ -1,3 +1,5 @@
+import { dbconnection } from "../database/init.js";
+
 export default function contact_advise(req, res) {
     dbconnection.collection("contact").insertOne({
         name: req.body.name,

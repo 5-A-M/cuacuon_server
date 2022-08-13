@@ -20,6 +20,7 @@ export const uploadInfo= (req, res)=> {
             hinge: req.body.hinge,
             price: req.body.price,
             photo: req.body.photo,
+            time_created: new Date()
         })    
         .then(()=> res.json("success"))
         .catch(err=> console.log(err))
@@ -43,6 +44,7 @@ export const uploadInfo= (req, res)=> {
             hinge: req.body.hinge,
             price: req.body.price,
             photo: req.body.photo,
+            time_created: new Date()
         })    
         .then(()=> res.json("success"))
         .catch(err=> console.log(err))
