@@ -1,5 +1,6 @@
 import express from "express"
 import uploadCloud from "../cloudinary/upload.js"
+import contact_advise from "../controller/contact_advise.js"
 import { delete_product } from "../controller/delete_product.js"
 import { apiDetailAccessory } from "../controller/detail_accessory.js"
 import { apiDetailLuxury } from "../controller/detail_door_luxury.js"
@@ -25,5 +26,6 @@ router.get("/api/v1/get/detail/accessory", apiDetailAccessory)
 router.put("/change/product", update_product)
 router.delete("/delete/product", delete_product)
 router.post("/admin/login", apiLogin)
+router.post("/contact/advise", contact_advise)
 
 export default router
